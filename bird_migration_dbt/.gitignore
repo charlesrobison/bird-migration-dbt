@@ -4,4 +4,4 @@ dbt_packages/
 logs/
 .env
 data/
-dev.duckdb
+*.duckdb

@@ -1,4 +1,7 @@
-{{ config(materialized='table') }}
+{{ config(
+    materialized='incremental',
+    unique_key='observation_id'
+) }}
 
 with final as (
     select 
@@ -31,3 +34,9 @@ with final as (
 
 select *
 from final
+
+{% if is_incremental() %}
+
+where observation_datetime > (select max(observation_datetime) from {{ this }})
+
+{% endif %}
