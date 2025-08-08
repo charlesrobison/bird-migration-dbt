@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# DBT artifacts
+dbt_packages/
+target/
+logs/
+
+# MacOS system files
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings (if using)
+.vscode/
+
+# Environment & credentials
+.env
+.env.*
+
+# Snowflake profile (if used with dbt)
+~/.dbt/profiles.yml

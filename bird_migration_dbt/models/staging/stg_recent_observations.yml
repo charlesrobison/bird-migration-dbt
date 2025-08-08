@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_recent_observations
+    description: "Staging model for recent bird observations from eBird API"
+    columns:
+      - name: species_code
+        description: "Species code as per eBird taxonomy"
+      - name: common_name
+        description: "Common name of the species"
+      - name: scientific_name
+        description: "Scientific name of the species"
+      - name: location_id
+        description: "Unique identifier for the observation location"
+      - name: location_name
+        description: "Name of the observation location"
+      - name: observation_datetime
+        description: "Date and time of the observation"
+      - name: how_many
+        description: "Number of individuals observed"
+      - name: latitude
+        description: "Latitude of the observation location"
+      - name: longitude
+        description: "Longitude of the observation location"
+      - name: observation_is_valid
+        description: "Flag indicating if the observation is valid"
+      - name: observation_is_reviewed
+        description: "Flag indicating if the observation has been reviewed"
+      - name: location_is_private
+        description: "Flag indicating if the location is private"
+      - name: submitted_by_id
+        description: "User ID of the person who submitted the observation"
+      - name: exotic_category
+        description: "Category of the species (e.g., native, exotic)"
+      - name: fetch_datetime
+        description: "Date and time when the observation was fetched from the API"
+      - name: observation_id
+        description: "Unique identifier for the observation"
+        tests:
+          - unique
+          - not_null
+          
