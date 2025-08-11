@@ -28,3 +28,5 @@ logs/
 
 # Snowflake profile (if used with dbt)
 ~/.dbt/profiles.yml
+dev.duckdb
+prod.duckdb
